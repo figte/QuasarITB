@@ -1,6 +1,6 @@
 <template>
-  <q-page class="flex flex-center bg-gray-5">
-    <div>
+  <q-page class="flex flex-center">
+    <div >
         <!-- ITB img  -->
         <img
           src="https://latam.intothebox.org/img/2019/itblatam.png"
