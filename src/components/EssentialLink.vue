@@ -1,9 +1,7 @@
 <template>
   <q-item
     clickable
-    tag="a"
-    target="_blank"
-    :href="link"
+    @click="executeRoute( link )"
   >
     <q-item-section
       v-if="icon"
@@ -43,6 +41,16 @@ export default {
     icon: {
       type: String,
       default: ''
+    }
+  },
+  methods : {
+    executeRoute( routeName ){
+      // Validar ruta
+      if( this.$route.name !=  routeName ){
+        // redireccionar
+        this.$router.push( { name: routeName } ); 
+      }
+      
     }
   }
 }

@@ -12,6 +12,10 @@ npm install
 quasar dev
 ```
 
+### Add Electrone support
+quasar mode add electron
+
+
 ### Lint the files
 ```bash
 npm run lint
