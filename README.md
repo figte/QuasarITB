@@ -8,53 +8,53 @@
     Instalar Quasar Framefork:  npm install -g @quasar/cli
 ```
 
-# Crear el proyecto
+## Crear el proyecto
 
 ```
     quasar create <folder_name>
 ```
 
-# Quasar App (itb_ejemplo)
+## Quasar App (itb_ejemplo)
 
 Quasar Framework app
 
 
-# Instalar dependencias
+## Instalar dependencias
 ```bash
 npm install
 ```
 
-# Iniciar servidor Dev
+### Iniciar servidor Dev
 ```bash
 quasar dev
 ```
 
-# Lint files
+### Lint files
 ```bash
 npm run lint
 ```
 
-# Agregar soperte para Electron 
+### Agregar soperte para Electron 
 quasar mode add electron
 
 
-# Iniciar servidor dev con Electron
+### Iniciar servidor dev con Electron
 quasar dev -m electron
 
 
-# Build la app para producción con Electron
+### Build la app para producción con Electron
 quasar build -m electron
 
-# Build la app para producción
+### Build la app para producción
 
 ```bash
 quasar build
 ```
 
-# Configuración custom
+### Configuración custom
 See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 
-# Integrar Tailwindcss
+### Integrar Tailwindcss
 ```
 1)  Instalar Tailwind CSS : npm rinstall tailwindcss
 
