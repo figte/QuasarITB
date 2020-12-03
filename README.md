@@ -1,4 +1,4 @@
-# Prerrequisitos
+## Prerrequisitos
 
 ```
     Instalar Node Js V 12.x.x.x, ejecuta node -v para revisar la versión instalada
@@ -45,7 +45,7 @@ quasar dev -m electron
 ### Build la app para producción con Electron
 quasar build -m electron
 
-### Build la app para producción
+### Build la app para produccióncon SPA
 
 ```bash
 quasar build
