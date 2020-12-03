@@ -26,7 +26,7 @@ npm run lint
 quasar build
 ```
 
-## Integrate tailwindcss
+## Integrate Tailwindcss
 ```
 1)  Install Tailwind CSS : npm rinstall tailwindcss
 

@@ -1,10 +1,14 @@
-<!-- Base layout -->
+
+<!-- *********************************************************************************  -->
+<!-- ******************************  Base layout  ************************************  -->
+<!-- *********************************************************************************  -->
 <template>
   <!-- Quasar layout -->
   <q-layout view="lHh Lpr lFf">
     <q-header elevated>
       <q-toolbar>
         
+        <!-- Menu btn -->
         <q-btn
           flat
           dense
@@ -14,11 +18,14 @@
           @click="leftDrawerOpen = !leftDrawerOpen"
         />
 
+        <!--  Titulo -->
         <q-toolbar-title>
           ITB EJemplo
         </q-toolbar-title>
 
+        <!-- Quaar version -->
         <div>Quasar v{{ $q.version }}</div>
+
       </q-toolbar>
     </q-header>
 
@@ -26,20 +33,25 @@
       v-model="leftDrawerOpen"
       show-if-above
       bordered
-      content-class="bg-grey-1"
+      content-class="bg-grey-2"
     >
       <q-list>
+        
+        <!-- Titulo -->
         <q-item-label
           header
           class="text-grey-8"
         >
           Menú
         </q-item-label>
+        
+        <!-- Links  -->
         <EssentialLink
           v-for="link in essentialLinks"
           :key="link.title"
           v-bind="link"
         />
+
       </q-list>
     </q-drawer>
 
@@ -50,28 +62,30 @@
 </template>
 
 <script>
-import EssentialLink from 'components/EssentialLink.vue'
-
-const linksData = [
-  {
-    title: 'Home',
-    icon: 'school',
-    link: 'home'
-  },
-  {
-    title: 'Listar datos',
-    icon: 'code',
-    link: 'list'
-  }
-];
-
+import EssentialLink from 'components/EssentialLink.vue';
 export default {
+  
   name: 'MainLayout',
+  
   components: { EssentialLink },
+
   data () {
     return {
+      // Menu estatus
       leftDrawerOpen: false,
-      essentialLinks: linksData
+      // Menu( links )
+      essentialLinks: [ 
+                        {
+                          title: 'Home',
+                          icon: 'home',
+                          link: 'home'
+                        },
+                        {
+                          title: 'Listar datos',
+                          icon: 'subject',
+                          link: 'list'
+                        }
+                    ]
     }
   }
 }

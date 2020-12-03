@@ -1,17 +1,20 @@
+import Layout from 'layouts/MainLayout.vue';
+import Index  from 'pages/Index.vue';
+import List   from 'pages/Listado.vue';
 
 const routes = [
   {
     path: '/',
-    component: () => import('layouts/MainLayout.vue'),
+    component: Layout,
     children: [
       { 
         path: '', 
-        component: () => import('pages/Index.vue'), 
+        component: Index, 
         name: 'home' 
       },
       { 
         path: 'list', 
-        component: () => import('pages/Listado.vue'), 
+        component: List, 
         name: 'list' 
       }
     ]

@@ -1,12 +1,24 @@
+<!-- *********************************************************************************  -->
+<!-- ******************************     Index     ************************************  -->
+<!-- *********************************************************************************  -->
 <template>
+
+  <!-- Contenedor Principal -->
   <q-page class="flex flex-center">
-    <div >
+    
+    <!-- Img contenedor -->
+    <div class="bg-gay-500">
+        
         <!-- ITB img  -->
         <img
-          src="https://latam.intothebox.org/img/2019/itblatam.png"
+          src="../assets/itblatam.png"
+          class="px-5 md:px-0"
         />
+
     </div>
-  </q-page> 
+
+  </q-page>
+
 </template>
 
 <script>
