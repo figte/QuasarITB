@@ -47,7 +47,7 @@
         
         <!-- Links  -->
         <EssentialLink
-          v-for="link in essentialLinks"
+          v-for="link in menu"
           :key="link.title"
           v-bind="link"
         />
@@ -62,7 +62,10 @@
 </template>
 
 <script>
+
 import EssentialLink from 'components/EssentialLink.vue';
+import { mapState } from "vuex";
+
 export default {
   
   name: 'MainLayout',
@@ -74,19 +77,12 @@ export default {
       // Menu estatus
       leftDrawerOpen: false,
       // Menu( links )
-      essentialLinks: [ 
-                        {
-                          title: 'Home',
-                          icon: 'home',
-                          link: 'home'
-                        },
-                        {
-                          title: 'Listar datos',
-                          icon: 'subject',
-                          link: 'list'
-                        }
-                    ]
+      essentialLinks: []
     }
-  }
+  },
+  computed : {
+		...mapState( "appstore", [ "menu" ] )
+	}
+
 }
 </script>

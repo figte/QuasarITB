@@ -1,3 +1,7 @@
+
+<!-- *********************************************************************************  -->
+<!-- ******************************      Links    ************************************  -->
+<!-- *********************************************************************************  -->
 <template>
   <q-item
     clickable
@@ -12,9 +16,6 @@
 
     <q-item-section>
       <q-item-label>{{ title }}</q-item-label>
-      <q-item-label caption>
-        {{ caption }}
-      </q-item-label>
     </q-item-section>
   </q-item>
 </template>
@@ -27,12 +28,7 @@ export default {
       type: String,
       required: true
     },
-
-    caption: {
-      type: String,
-      default: ''
-    },
-
+    // Vue router( nombre - name )
     link: {
       type: String,
       default: '#'
@@ -47,7 +43,7 @@ export default {
     executeRoute( routeName ){
       // Validar ruta
       if( this.$route.name !=  routeName ){
-        // redireccionar
+        // Redireccionar
         this.$router.push( { name: routeName } ); 
       }
       

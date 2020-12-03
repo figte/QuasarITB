@@ -1,5 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
+import appstore from '../store/appstore';
 
 // import example from './module-example'
 
@@ -16,8 +17,10 @@ Vue.use(Vuex)
 
 export default function (/* { ssrContext } */) {
   const Store = new Vuex.Store({
+    
+    // Agregar modulos
     modules: {
-      // example
+      "appstore" : appstore
     },
 
     // enable strict mode (adds overhead!)

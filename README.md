@@ -1,36 +1,64 @@
+# Prerrequisitos
+
+```
+    Instalar Node Js V 12.x.x.x, ejecuta node -v para revisar la versión instalada
+    
+    Configurar el acceso a las extensiones de Node JS de forma forma global( Variables de entorno  agregar a la path : %APPDATA%\npm )
+
+    Instalar Quasar Framefork:  npm install -g @quasar/cli
+```
+
+# Crear el proyecto
+
+```
+    quasar create <folder_name>
+```
+
 # Quasar App (itb_ejemplo)
 
-A Quasar Framework app
+Quasar Framework app
 
-## Install the dependencies
+
+## Instalar dependencias
 ```bash
 npm install
 ```
 
-### Start the app in development mode (hot-code reloading, error reporting, etc.)
+## Iniciar servidor Dev
 ```bash
 quasar dev
 ```
 
-### Add Electrone support
-quasar mode add electron
-
-
-### Lint the files
+### Lint files
 ```bash
 npm run lint
 ```
 
-### Build the app for production
+## Agregar soperte para Electron 
+quasar mode add electron
+
+
+### Iniciar servidor dev con Electron
+quasar dev -m electron
+
+
+### Build la app para producción con Electron
+quasar build -m electron
+
+## Build la app para producción
+
 ```bash
 quasar build
 ```
 
-## Integrate Tailwindcss
-```
-1)  Install Tailwind CSS : npm rinstall tailwindcss
+## Configuración custom
+See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
 
-2)  Add styles to "src/css/app.scss" :
+## Integrar Tailwindcss
+```
+1)  Instalar Tailwind CSS : npm rinstall tailwindcss
+
+2)  Agregar estilos base  en "src/css/app.scss" :
 
         @tailwind base;
 
@@ -38,7 +66,7 @@ quasar build
 
         @tailwind utilities;
 
-3) Update .postcssrc.js
+3) Actualizar .postcssrc.js
     
     module.exports = {
         plugins: [
@@ -47,7 +75,7 @@ quasar build
         ]
     }
 
-4) Add tailwind.config.js ( Project root )
+4) Agregar tailwind.config.js ( Project root )
 
     module.exports = {
         important : true,
@@ -56,12 +84,9 @@ quasar build
         plugins   : []
     };
 
-5) If exist any issue with postCSS7
+5) Si presenta errores con postCSS7
 
     npm uninstall tailwindcss postcss autoprefixer
     npm install tailwindcss@npm:@tailwindcss/postcss7-compat postcss@^7 autoprefixer@^9
 
 ```
-
-### Customize the configuration
-See [Configuring quasar.conf.js](https://quasar.dev/quasar-cli/quasar-conf-js).
